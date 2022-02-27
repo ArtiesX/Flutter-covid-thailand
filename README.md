@@ -1,4 +1,4 @@
-# covidthailand
+# Covid Thailand
 
 A new Flutter project.
 
