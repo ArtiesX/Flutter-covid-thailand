@@ -8,7 +8,7 @@ This project is a starting point for a Flutter application.
 
 ## Warning!!!
 
-api อัพเดทถึง 13/11/2022
+API last update : 13/11/2022
 
 ## API Covid-19 in Thailand
 https://covid19.ddc.moph.go.th/
