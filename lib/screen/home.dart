@@ -27,7 +27,6 @@ class _HomePageState extends State<HomePage> {
     getCovid();
   }
 
-  @override
   void disonse() {
     super.dispose();
   }
@@ -37,12 +36,12 @@ class _HomePageState extends State<HomePage> {
         Uri.https('covid19.ddc.moph.go.th', '/api/Cases/today-cases-all');
     var url2 = Uri.https(
         'covid19.ddc.moph.go.th', '/api/Cases/today-cases-by-provinces');
-    // response1 = covid total
-    var response1 = await http.get(url1);
-    // response2 == covid province
-    var response2 = await http.get(url2);
-    _totalCovid = covid19ThTotalFromJson(response1.body);
-    _provinceCovid = covid19ThProvinceFromJson(response2.body);
+    // res1 == covid total
+    var res1 = await http.get(url1);
+    // res2 == covid province
+    var res2 = await http.get(url2);
+    _totalCovid = covid19ThTotalFromJson(res1.body);
+    _provinceCovid = covid19ThProvinceFromJson(res2.body);
     return _totalCovid;
   }
 
@@ -641,8 +640,11 @@ class _HomePageState extends State<HomePage> {
               ),
             );
           }
+
           return const Center(
-            child: CircularProgressIndicator(color: Colors.redAccent,),
+            child: CircularProgressIndicator(
+              color: Colors.redAccent,
+            ),
           );
         },
       )),
